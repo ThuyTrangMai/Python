@@ -1,7 +1,7 @@
+n = int(input('Nhập gia tri n sao cho n > 0: '))
 #Hinh thứ nhất - Hinh chu nhat
 
 print('\"Hình  1 - Hinh chu nhat\"')
-n = int(input('Nhập gia tri n sao cho n > 0: '))
 #chay bang vong lap for
 
 print("Hinh chu nhat theo for")
@@ -18,10 +18,8 @@ else:
        print('*****')
        i += 1
 
-
 #Hình thứ 2 - tam giac vuong
 print('\n\"Hình 2- tam giac vuong\"')
-n = int(input(" Nhập gia tri n sao cho n > 0: "))
 while (n <= 0):
    n = int(input('Hãy nhập n > 0: '))
 else:
@@ -32,31 +30,15 @@ else:
 
 #Hình thứ 3 - tam giac vuong nguoc
 print('\n\"Hình 3 - tam giac vuong nguoc\"')
-n = int(input('Nhập n: '))
-while (n < 0):
-   n = int(input('Nhập gia tri n sao cho n > 0:  '))
-else:
-   for i in range(1, n+1):
-       for j in range(1, n+1-i):
-           print("", end =" ");
-       for k in range(i):
-           print("*", end="");
-       print()
+for i in range(1,n+1):
+      print(" " * (n-i) + "*" * i);
 
-#Hình thứ 4 - tam giac deu
-print('\n\"Hình 4 - tam giac deu\"')
-n = int(input('Nhập n: '))
+#Hình thứ 4 - tam giac can
+print('\n\"Hình 4 - tam giac can\"')
+for i in range(1, n+1):
+    s = n - i
+    print (" " * s + "*" * ((2 * i)-1))
 
-while (n < 0):
-   n = int(input('Nhập gia tri n sao cho n > 0:  '))
-else:
-   for i in range(1, n+1):
-       if (i%2 != 0):
-           for j in range(1, n+1-i):
-               print("", end =" ")
-           for k in range(i):
-               print("*", end=" ")
-           print()
 
 #Bai2: Viết chương trình tìm số dương lớn  nhất và số âm bé nhất,
 #nếu dãy không có số dương hay số âm thì xuất ra dấu *.
@@ -95,7 +77,8 @@ dictA_V = {
    "student" : "sinh viên",
    "we" : "chúng tôi",
    "research" : "nghiên cứu",
-   "science" : "khoa học"
+   "science" : "khoa học",
+    "instagram" : "chang.m3t"
 }
 
 def menu():
@@ -148,6 +131,6 @@ while choice != 0:
    elif choice == 4:
        xoa_tu()
    else:
-       print("Chương trình hông có chức năng này!")
+       print("Chương trình không có chức năng này!")
    choice = int(input("\n->> Nhập vào chức bạn cần: "))
 
